@@ -24,7 +24,7 @@ resource "aws_vpc" "my_vpc" {
 
 resource "aws_instance" "app_server" {
     ami           = "ami-09042b2f6d07d164a"
-    instance_type = "t2.large"
+    instance_type = "t2.micro"
     tags = {
         Name = "app-server"
     }
