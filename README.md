@@ -20,3 +20,8 @@ deny["Policy was denied"] {
 
 sample { true }
 ```
+
+## destroy infrastructure
+```bash
+terraform destroy -auto-approve
+```
