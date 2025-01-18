@@ -17,7 +17,7 @@ resource "aws_vpc" "my_vpc" {
     cidr_block = "10.2.0.0/16"
 
     tags = {
-        Name = "nb-vpc"
+        Name = var.vpc_name
     }
 }
   
@@ -26,7 +26,7 @@ resource "aws_instance" "app_server" {
     ami           = "ami-09042b2f6d07d164a"
     instance_type = "t2.micro"
     tags = {
-        Name = "app-server"
+        Name = var.instance_name
     }
   
 }
