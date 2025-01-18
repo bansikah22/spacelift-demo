@@ -12,6 +12,16 @@ provider "aws" {
     region = "eu-central-1"
 }
 
+
+resource "aws_vpc" "my_vpc" {
+    cidr_block = "10.0.0.0/16"
+
+    tags = {
+        Name = "nb-vpc"
+    }
+}
+  
+
 resource "aws_instance" "app_server" {
     ami           = "ami-09042b2f6d07d164a"
     instance_type = "t2.micro"
@@ -21,4 +31,3 @@ resource "aws_instance" "app_server" {
   
 }
 
-# random comment
